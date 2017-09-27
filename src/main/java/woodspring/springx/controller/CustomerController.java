@@ -46,7 +46,7 @@ public class CustomerController {
     
     // -------------------Retrieve Single Custoemr------------------------------------------
  
-    @RequestMapping(value = "/customer/{id}", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/customer/{id}", produces=MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> getCustomer(@PathVariable("id") int id) {
         logger.info("Fetching Custoemr with id {}", id);
         Customer customer = customerService.getCustomerById( id);
